@@ -30,7 +30,7 @@ func (c *CliInput) Analysis() error {
 
 	if *c.TestSpecConfigurationName == "" {
 		if *c.TestSpecConfigurationPath == "" && *c.TestSpecConfigurationType == "" {
-			return errors.New("testSpecConfigurationName or testSpecConfigurationName must be exist")
+			return errors.New("-testSpecConfigurationName or -testSpecConfigurationName must be exist")
 		}
 	}
 
@@ -49,7 +49,7 @@ func (c *CliInput) Analysis() error {
 	}
 
 	if *c.AppName == "" && *c.AppPath == "" {
-		return errors.New("appName or appPath must be exist")
+		return errors.New("-appName or -appPath must be exist")
 	}
 
 	if *c.AppPath != "" {

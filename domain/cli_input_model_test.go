@@ -100,7 +100,7 @@ func TestShouldThrowErrorWhenTestSpecConfigurationNamePathAndTypeNotExist(t *tes
 	err := cliInput.Analysis()
 
 	assert.Error(t, err)
-	assert.Equal(t, "testSpecConfigurationName or testSpecConfigurationName must be exist", err.Error())
+	assert.Equal(t, "-testSpecConfigurationName or -testSpecConfigurationName must be exist", err.Error())
 }
 
 func TestShouldThrowErrorWhenAppNameOrAppPathIsEmpty(t *testing.T) {
@@ -118,7 +118,7 @@ func TestShouldThrowErrorWhenAppNameOrAppPathIsEmpty(t *testing.T) {
 	err := cliInput.Analysis()
 
 	assert.Error(t, err)
-	assert.Equal(t, "appName or appPath must be exist", err.Error())
+	assert.Equal(t, "-appName or -appPath must be exist", err.Error())
 }
 func TestShouldThrowErrorWhenAppPathDoesNotHaveMobileExtension(t *testing.T) {
 	cliInput := CliInput{
