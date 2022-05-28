@@ -96,6 +96,8 @@ func (c CliService) StartTestingProcess(section string, cliInput *domain.CliInpu
 			if err != nil {
 				return err
 			}
+
+			return nil
 		}
 		return errors.New("Unable to find project with provided name 😡 " + *cliInput.ProjectName)
 	}
